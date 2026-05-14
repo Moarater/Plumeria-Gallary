@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plumeria Service Portfolio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4/dist/theme/white.css">
+    <style>
+        :root {
+            --dark-blue: #1d2a55;
+            --light-green: #8bc655;
+            --bg-soft: rgb(245, 248, 245);
+        }
+        .reveal { background-color: var(--bg-soft); color: var(--dark-blue); }
+        
+        /* الشعار الثابت أعلى اليمين */
+        .fixed-logo {
+            position: absolute; top: 20px; right: 20px;
+            width: 100px; z-index: 10;
+        }
+
+        /* العناوين والتنسيق */
+        .reveal h1, .reveal h2 { color: var(--dark-blue); font-weight: bold; }
+        .reveal h3 { color: var(--light-green); font-size: 1.1em; margin-bottom: 10px; }
+        .highlight-text { color: var(--light-green); font-weight: bold; }
+        
+        /* شبكة الصور */
+        .gallery-grid {
+            display: grid; grid-template-columns: repeat(4, 1fr);
+            gap: 8px; padding: 10px;
+        }
+        .gallery-grid img {
+            width: 100%; height: 90px; object-fit: cover;
+            border-radius: 5px; border: 1px solid #ddd;
+        }
+        .caption { font-size: 0.4em; color: var(--dark-blue); margin-top: 2px; }
+        
+        /* تنسيق صفحة الخدمات */
+        .service-list { text-align: left; font-size: 0.7em; line-height: 1.6; }
+    </style>
+</head>
+<body>
+    <img src="logo.png" class="fixed-logo">
+
+    <div class="reveal">
+        <div class="slides">
+
+            <!-- 1. صفحة الغلاف -->
+            <section data-background-color="#ffffff">
+                <img src="hero.png" style="height: 200px; margin-bottom: 20px;">
+                <h1>Plumeria Service</h1>
+                <p style="color: var(--light-green); font-size: 1.2em;">Reinigungsdienstleistung</p>
+                <div style="margin-top: 40px; font-size: 0.6em; border-top: 2px solid var(--light-green); display: inline-block; padding-top: 10px;">
+                    REFERENZMAPPE 2024-2026
+                </div>
+            </section>
+
+            <!-- 2. الخدمات (نص فقط) -->
+            <section>
+                <h2>Unsere Leistungen</h2>
+                <div class="service-list">
+                    <p>Der Schwerpunkt unserer Tätigkeiten liegt auf der <span class="highlight-text">Gebäudereinigung</span>.</p>
+                    <p>Dazu gehören:</p>
+                    <ul style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                        <li>• Unterhaltsreinigung</li>
+                        <li>• Glasreinigung</li>
+                        <li>• Büroreinigung</li>
+                        <li>• Grundreinigung</li>
+                        <li>• Industriereinigung</li>
+                        <li>• Bauendreinigung</li>
+                    </ul>
+                    <p style="margin-top: 20px; font-style: italic;">...die wir stets mit hoher Professionalität und zur Zufriedenheit unserer Kunden durchführen.</p>
+                </div>
+            </section>
+
+            <!-- 3. Bauendreinigung H&M -->
+            <section>
+                <h3>Bauendreinigung - H&M</h3>
+                <p style="font-size: 0.4em;">Anger 62, Erfurt | H&M Kids Schlösserstraße 8, Erfurt</p>
+                <div class="gallery-grid">
+                    <img src="bau-hm/Bauendr0.jpg"> <img src="bau-hm/Bauendr1.jpg">
+                    <img src="bau-hm/Bauendr2.jpg"> <img src="bau-hm/Bauendr3.jpg">
+                    <img src="bau-hm/Bauendr4.jpg"> <img src="bau-hm/Bauendr5.jpg">
+                    <img src="bau-hm/Bauendr6.jpg"> <img src="bau-hm/Bauendr7.jpg">
+                    <img src="bau-hm/Bauendr8.jpg"> <img src="bau-hm/Bauendr9.jpg">
+                    <img src="bau-hm/Bauendr10.jpg"> <img src="bau-hm/Bauendr11.jpg">
+                </div>
+            </section>
+
+            <!-- 4. Bauendreinigung Uni Weimar -->
+            <section>
+                <h3>Bauendreinigung - Bauhaus-Universität Weimar</h3>
+                <p style="font-size: 0.4em;">Marienstraße 13, 99423 Weimar</p>
+                <div class="gallery-grid">
+                    <img src="bau-uni/uin0.jpg"> <img src="bau-uni/uni1.jpg">
+                    <img src="bau-uni/uni2.jpg"> <img src="bau-uni/uin3.jpg">
+                    <img src="bau-uni/uni4.jpg"> <img src="bau-uni/uni5.jpg">
+                    <img src="bau-uni/uin6.jpg"> <img src="bau-uni/uni7.jpg">
+                    <img src="bau-uni/uni8.jpg"> <img src="bau-uni/uin9.jpg">
+                    <img src="bau-uni/uni10.jpg"> <img src="bau-uni/uni11.jpg">
+                </div>
+            </section>
+
+            <!-- 5. Glasreinigung -->
+            <section>
+                <h3>Glasreinigung</h3>
+                <p style="font-size: 0.4em;">Thuringia International School Weimar & Privatkunden</p>
+                <div class="gallery-grid">
+                    <img src="glas/Glas0.jpg"> <img src="glas/Glas01.jpg">
+                    <img src="glas/Glas02.jpg"> <img src="glas/Glas2.jpg">
+                    <img src="glas/Glas5.jpg"> <img src="glas/Glas8.jpg">
+                    <img src="glas/Glas9.jpg"> <img src="glas/Glas10.jpg">
+                </div>
+            </section>
+
+            <!-- 6. Industriereinigung -->
+            <section>
+                <h3>Industriereinigung</h3>
+                <div class="gallery-grid" style="grid-template-columns: repeat(3, 1fr);">
+                    <img src="industrie/in0.jpg"> <img src="industrie/in1.jpg">
+                    <img src="industrie/in2.jpg"> <img src="industrie/in3.jpg">
+                    <img src="industrie/in4.jpg">
+                </div>
+            </section>
+
+            <!-- 7. verschiedene Arbeiten -->
+            <section>
+                <h3>Verschiedene Arbeiten</h3>
+                <div class="gallery-grid">
+                    <div><img src="verschiedene Arbeiten/bh0.jpg"><p class="caption">Bauhelfe</p></div>
+                    <div><img src="verschiedene Arbeiten/bh1.jpg"><p class="caption">Bauhelfe</p></div>
+                    <div><img src="verschiedene Arbeiten/bh4.jpg"><p class="caption">Bauhelfe</p></div>
+                    <div><img src="verschiedene Arbeiten/Grundrinigung.jpg"><p class="caption">Grundreinigung</p></div>
+                    <div><img src="verschiedene Arbeiten/k0.jpg"><p class="caption">Kindergarten-Reinigung</p></div>
+                    <div><img src="verschiedene Arbeiten/Restuaurant.jpg"><p class="caption">Restaurant</p></div>
+                    <div><img src="verschiedene Arbeiten/Treppenhaus.jpg"><p class="caption">Treppenhausreinigung</p></div>
+                </div>
+            </section>
+
+            <!-- 8. Unser Team -->
+            <section>
+                <h3>Unser Team</h3>
+                <img src="team/team1.jpg" style="height: 300px; border-radius: 15px; border: 5px solid white; box-shadow: 0 10px 20px rgba(0,0,0,0.1);">
+                <p style="font-size: 0.6em; margin-top: 10px;">Professionell, zuverlässig und immer für Sie da.</p>
+            </section>
+
+            <!-- 9. صفحة الخاتمة -->
+            <section data-background-color="#1d2a55">
+                <h2 style="color: white;">Kontakt</h2>
+                <div style="color: white; font-size: 0.7em; text-align: left; padding: 40px; background: rgba(255,255,255,0.1); border-radius: 10px;">
+                    <p><strong>Plumeria Service</strong></p>
+                    <p>Inhaber: Mohamed Abubaker</p>
+                    <hr>
+                    <p>📱 Mobil: 0179 4605942</p>
+                    <p>📞 Telefon: 03643 216 42 21</p>
+                    <p>📧 E-Mail: info@plumeria-service.de</p>
+                    <p>🌐 Web: www.plumeria-service.de</p>
+                    <p>📍 Otto-Schott-Straße 1, 99427 Weimar</p>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4/dist/reveal.js"></script>
+    <script>
+        Reveal.initialize({ hash: true, transition: 'convex', center: true });
+    </script>
+</body>
+</html>
