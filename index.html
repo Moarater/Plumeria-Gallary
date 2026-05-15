@@ -14,58 +14,69 @@
         }
         .reveal { background-color: var(--bg-soft); color: var(--dark-blue); }
         
-        /* الشعار الثابت أعلى اليمين - تم تصحيح الاسم والحجم */
+        /* الشعار الثابت أعلى اليمين لمنع تداخل النصوص */
         .fixed-logo {
-            position: fixed; /* تغيير من absolute إلى fixed لضمان الثبات */
+            position: fixed; 
             top: 20px; 
-            left: 20px;
-            width: 140px; 
+            right: 20px;
+            width: 130px; 
             height: auto;
-            z-index: 9999; /* رفعه لأعلى طبقة لكي لا تغطيه الصور */
+            z-index: 9999; 
         }
 
-        .reveal h1 { color: var(--dark-blue); font-weight: bold; }
+        .reveal h1 { color: var(--dark-blue); font-weight: bold; font-size: 1.8em; }
 
-    .reveal h2 { 
-    color: var(--dark-blue); 
-    font-weight: bold; 
-    font-size: 0.8em; /* هذا هو السطر المسؤول عن تكبير أو تصغير العناوين */
-    margin-bottom: 5px; 
-    text-transform: none; /* سيحول "H&M" إلى "h&m" */
-}
-        .reveal h3 { color: var(--light-green); font-size: 0.8em; margin-bottom: 10px; }
-        .highlight-text { color: var(--light-green); font-weight: bold; }
-        text-transform: none;
+        .reveal h2 { 
+            color: var(--dark-blue); 
+            font-weight: bold; 
+            font-size: 1.4em; 
+            margin-bottom: 15px; 
+            text-transform: none; 
         }
         
+        .reveal h3 { 
+            color: var(--light-green); 
+            font-weight: bold;
+            font-size: 1.4em; 
+            margin-bottom: 15px; 
+            text-transform: none;
+        }
+        
+        .highlight-text { color: var(--light-green); font-weight: bold; }
+        
         .gallery-grid {
-            display: grid; grid-template-columns: repeat(2, 1fr);
-            gap: 10px; padding: 10px;
+            display: grid; 
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px; 
+            padding: 5px;
         }
         .gallery-grid img {
-            width: 100%; height: 250px; object-fit: cover;
-            border-radius: 8px; border: 1px solid #ddd;
+            width: 100%; 
+            height: 230px; 
+            object-fit: cover;
+            border-radius: 8px; 
+            border: 1px solid #ddd;
         }
-        .caption { font-size: 0.5em; color: var(--dark-blue); margin-top: 0.5px; }
-        .service-list { text-align: left; font-size: 0.7em; line-height: 1.6; }
-        .category-tag { font-size: 0.6em; color: var(--light-green); font-weight: bold; text-transform: capitalize; }
+        .caption { font-size: 0.6em; color: var(--dark-blue); margin-top: 5px; font-weight: bold; }
+        .service-list { text-align: left; font-size: 0.75em; line-height: 1.6; }
+        .category-tag { display: block; font-size: 0.6em; color: var(--light-green); font-weight: bold; text-transform: uppercase; margin-bottom: 5px; }
     </style>
 </head>
 <body>
-    <!-- تم تصحيح اسم الملف والكلاس هنا -->
+
     <img src="Logo.png" class="fixed-logo">
 
     <div class="reveal">
         <div class="slides">
 
-            <!-- 1. صفحة الغلاف - تم تصحيح حجم صورة الهيرو لتناسب الشاشة -->
+            <!-- 1. صفحة الغلاف -->
             <section data-background-color="#ffffff">
                 <img src="Logo.png" style="height: 140px; margin-bottom: 20px; border:none; box-shadow:none;">
                 <h1 style="font-size: 1.2em;">Plumeria Service für Reinigungsdienstleistung</h1>
                 <img src="hero.jpg" style="height: 300px; width: auto; border-radius: 10px; margin-top: 20px;">
             </section>
 
-            <!-- 2. الخدمات (نص فقط) -->
+            <!-- 2. الخدمات -->
             <section>
                 <h2>Unsere Leistungen</h2>
                 <div class="service-list">
@@ -83,91 +94,86 @@
                 </div>
             </section>
 
-<!-- 3. Bauendreinigung H&M - الجزء الأول -->
-<section>
-    <span class="category-tag">Bauendreinigung</span>
-    <h2>H&M - Erfurt (Teil 1)</h2>
-    <div class="gallery-grid">
-        <img src="bau-hm/Bauendr0.jpg"> <img src="bau-hm/Bauendr1.jpg">
-        <img src="bau-hm/Bauendr2.jpg"> <img src="bau-hm/Bauendr3.jpg">
+            <!-- 3. Bauendreinigung H&M - Teil 1 -->
+            <section>
+                <span class="category-tag">Bauendreinigung</span>
+                <h2>H&M - Erfurt (Teil 1)</h2>
+                <div class="gallery-grid">
+                    <img src="bau-hm/Bauendr0.jpg"> <img src="bau-hm/Bauendr1.jpg">
+                    <img src="bau-hm/Bauendr2.jpg"> <img src="bau-hm/Bauendr3.jpg">
+                </div>
+            </section>
 
-    </div>
-</section>
+            <!-- 3. Bauendreinigung H&M - Teil 2 -->
+            <section>
+                <span class="category-tag">Bauendreinigung</span>
+                <h2>H&M - Erfurt (Teil 2)</h2>
+                <div class="gallery-grid">
+                    <img src="bau-hm/Bauendr5.jpg"> <img src="bau-hm/Bauendr6.jpeg">
+                    <img src="bau-hm/Bauendr7.jpeg"> <img src="bau-hm/Bauendr8.jpeg">
+                </div>
+            </section>
 
-<!-- 3. Bauendreinigung H&M - الجزء الثاني -->
-<section>
-    <span class="category-tag">Bauendreinigung</span>
-    <h2>H&M - Erfurt (Teil 2)</h2>
-    <div class="gallery-grid">
-        <img src="bau-hm/Bauendr5.jpg"> <img src="bau-hm/Bauendr6.jpeg">
-        <img src="bau-hm/Bauendr7.jpeg"> <img src="bau-hm/Bauendr8.jpeg">
-    </div>
-</section>
+            <!-- 3. Bauendreinigung H&M - Teil 3 -->
+            <section>
+                <span class="category-tag">Bauendreinigung</span>
+                <h2>H&M - Erfurt (Teil 3)</h2>
+                <div class="gallery-grid">
+                    <img src="bau-hm/Bauendr9.jpeg"> <img src="bau-hm/Bauendr10.jpeg">
+                    <img src="bau-hm/Bauendr11.jpeg"> <img src="bau-hm/Bauendr12.jpeg">
+                </div>
+            </section>
 
+            <!-- 3. Bauendreinigung H&M - Teil 4 -->
+            <section>
+                <span class="category-tag">Bauendreinigung</span>
+                <h2>H&M - Erfurt (Teil 4)</h2>
+                <div class="gallery-grid">
+                    <img src="bau-hm/Bauendr13.jpeg"> <img src="bau-hm/Bauendr14.jpeg">
+                    <img src="bau-hm/Bauendr15.jpeg"> <img src="bau-hm/Bauendr16.jpeg">
+                </div>
+            </section>         
+                
+            <!-- 4. Bauendreinigung Uni Weimar - Teil 1 -->
+            <section>
+                <span class="category-tag">Bauendreinigung</span>
+                <h2>Bauhaus-Uni Weimar (Teil 1)</h2>
+                <div class="gallery-grid">
+                    <img src="bau-uni/uni0.jpeg"> <img src="bau-uni/uni1.jpeg">
+                    <img src="bau-uni/uni2.jpeg"> <img src="bau-uni/uni3.jpeg">
+                </div>
+            </section>
 
-<!-- 3. Bauendreinigung H&M - الجزء الثالث -->
-<section>
-    <span class="category-tag">Bauendreinigung</span>
-    <h2>H&M - Erfurt (Teil 3)</h2>
-    <div class="gallery-grid">
-        <img src="bau-hm/Bauendr9.jpeg"> <img src="bau-hm/Bauendr10.jpeg">
-        <img src="bau-hm/Bauendr11.jpeg"> <img src="bau-hm/Bauendr12.jpeg">
-    </div>
-</section>
+            <!-- 4. Bauendreinigung Uni Weimar - Teil 2 -->
+            <section>
+                <span class="category-tag">Bauendreinigung</span>
+                <h2>Bauhaus-Uni Weimar (Teil 2)</h2>
+                <div class="gallery-grid">
+                    <img src="bau-uni/uni4.jpeg"> <img src="bau-uni/uni5.jpeg">
+                    <img src="bau-uni/uni7.jpeg"> <img src="bau-uni/uni6.jpeg">
+                </div>
+            </section>    
 
-<!-- 3. Bauendreinigung H&M - الجزء الرابع -->
-<section>
-    <span class="category-tag">Bauendreinigung</span>
-    <h2>H&M - Erfurt (Teil 4)</h2>
-    <div class="gallery-grid">
-        <img src="bau-hm/Bauendr13.jpeg"> <img src="bau-hm/Bauendr14.jpeg">
-        <img src="bau-hm/Bauendr15.jpeg"> <img src="bau-hm/Bauendr16.jpeg">
-    </div>
-</section>         
-            
-            
-<!-- 4. Bauendreinigung Uni Weimar - الجزء الأول -->
-<section>
-    <span class="category-tag">Bauendreinigung</span>
-    <h2>Bauhaus-Uni Weimar (Teil 1)</h2>
-    <div class="gallery-grid">
-        <img src="bau-uni/uni0.jpeg"> <img src="bau-uni/uni1.jpeg">
-        <img src="bau-uni/uni2.jpeg"> <img src="bau-uni/uni3.jpeg">
+            <!-- 4. Bauendreinigung Uni Weimar - Teil 3 -->
+            <section>
+                <span class="category-tag">Bauendreinigung</span>
+                <h2>Bauhaus-Uni Weimar (Teil 3)</h2>
+                <div class="gallery-grid">
+                    <img src="bau-uni/uni13.jpeg"> <img src="bau-uni/uni8.jpeg">
+                    <img src="bau-uni/uni9.jpeg"> <img src="bau-uni/uni10.jpeg">
+                </div>
+            </section>      
 
-    </div>
-</section>
+            <!-- 4. Bauendreinigung Uni Weimar - Teil 4 -->
+            <section>
+                <span class="category-tag">Bauendreinigung</span>
+                <h2>Bauhaus-Uni Weimar (Teil 4)</h2>
+                <div class="gallery-grid">
+                    <img src="bau-uni/uni11.jpeg"> <img src="bau-uni/uni12.jpeg">
+                </div>
+            </section>              
 
-
-<!-- 4. Bauendreinigung Uni Weimar - الجزء الثاني -->
-<section>
-    <span class="category-tag">Bauendreinigung</span>
-    <h2>Bauhaus-Uni Weimar (Teil 2)</h2>
-    <div class="gallery-grid">
-        <img src="bau-uni/uni4.jpeg"> <img src="bau-uni/uni5.jpeg">
-        <img src="bau-uni/uni7.jpeg"> <img src="bau-uni/uni6.jpeg">
-    </div>
-</section>    
-
-<!-- 4. Bauendreinigung Uni Weimar -  الجزء الثالث -->
-<section>
-    <span class="category-tag">Bauendreinigung</span>
-    <h2>Bauhaus-Uni Weimar (Teil 3)</h2>
-    <div class="gallery-grid">
-        <img src="bau-uni/uni13.jpeg"> <img src="bau-uni/uni8.jpeg">
-        <img src="bau-uni/uni9.jpeg"> <img src="bau-uni/uni10.jpeg">
-    </div>
-</section>      
-
- <!-- 4. Bauendreinigung Uni Weimar -  الجزء الرابع -->
-<section>
-    <span class="category-tag">Bauendreinigung</span>
-    <h2>Bauhaus-Uni Weimar (Teil 4)</h2>
-    <div class="gallery-grid">
-        <img src="bau-uni/uni11.jpeg"> <img src="bau-uni/uni12.jpeg">
-    </div>
-</section>              
-
-<!-- 5. Glasreinigung - Teil 1 -->
+            <!-- 5. Glasreinigung - Teil 1 -->
             <section>
                 <h2>Glasreinigung (Teil 1)</h2>
                 <div class="gallery-grid">
@@ -176,7 +182,7 @@
                 </div>
             </section>
 
-<!-- 5. Glasreinigung - Teil 2 -->
+            <!-- 5. Glasreinigung - Teil 2 -->
             <section>
                 <h2>Glasreinigung (Teil 2)</h2>
                 <div class="gallery-grid">
@@ -185,12 +191,12 @@
                 </div>
             </section>
 
-<!-- 5. Glasreinigung - Teil 3 -->
+            <!-- 5. Glasreinigung - Teil 3 -->
             <section>
                 <h2>Glasreinigung (Teil 3)</h2>
                 <div class="gallery-grid">
                     <img src="glas/Glas9.jpeg"> <img src="glas/Glas5.jpg">
-                     <img src="glas/Glas11.jpeg"> <img src="glas/Glas12.jpg">
+                    <img src="glas/Glas11.jpeg"> <img src="glas/Glas12.jpg">
                 </div>
             </section>            
 
@@ -204,16 +210,14 @@
                 </div>
             </section>
 
-            <!-- 7. verschiedene Arbeiten - Teil 1 -->
+            <!-- 7. verschiedene Arbeiten - Teil 1 (تم تصحيح وسوم الإغلاق هنا) -->
             <section>
                 <h3>Verschiedene Arbeiten (Teil 1)</h3>
                 <div class="gallery-grid">
-                    <div><img src="verschiedene Arbeiten/bh0.jpeg"><p class="caption">Bauhelfe</p></<div>
-                    <div><img src="verschiedene Arbeiten/bh1.jpeg"><p class="caption">Bauhelfe</p></<div>
-                    <div><img src="verschiedene Arbeiten/bh2.jpg"><p class="caption">Bauhelfe</p></<div>
-                    <div><img src="verschiedene Arbeiten/bh4.jpg"><p class="caption">Bauhelfe</p></<div>
-                  
-               
+                    <div><img src="verschiedene Arbeiten/bh0.jpeg"><p class="caption">Bauhelfe</p></div>
+                    <div><img src="verschiedene Arbeiten/bh1.jpeg"><p class="caption">Bauhelfe</p></div>
+                    <div><img src="verschiedene Arbeiten/bh2.jpg"><p class="caption">Bauhelfe</p></div>
+                    <div><img src="verschiedene Arbeiten/bh4.jpg"><p class="caption">Bauhelfe</p></div>
                 </div>
             </section>
 
@@ -221,7 +225,6 @@
             <section>
                 <h3>Verschiedene Arbeiten (Teil 2)</h3>
                 <div class="gallery-grid">
-
                     <div><img src="verschiedene Arbeiten/k1.jpeg"><p class="caption">Kindergarten-Reinigung</p></div>
                     <div><img src="verschiedene Arbeiten/Restuaurant.jpg"><p class="caption">Restaurant</p></div>
                     <div><img src="verschiedene Arbeiten/Treppenhaus.jpg"><p class="caption">Treppenhausreinigung</p></div>
@@ -236,7 +239,7 @@
                 <p style="font-size: 0.6em; margin-top: 10px;">Professionell, zuverlässig und immer für Sie da.</p>
             </section>
 
-            <!-- 9. صفحة الخاتمة -->
+            <!-- 9. Kontakt -->
             <section data-background-color="#1d2a55">
                 <h2 style="color: white;">Kontakt</h2>
                 <div style="color: white; font-size: 0.7em; text-align: left; padding: 40px; background: rgba(255,255,255,0.1); border-radius: 10px;">
