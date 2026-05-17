@@ -14,7 +14,7 @@
         }
         .reveal { background-color: var(--bg-soft); color: var(--dark-blue); }
         
-        /* الشعار الثابت أعلى اليمين لمنع تداخل النصوص */
+        /* الشعار الثابت أعلى اليمين */
         .fixed-logo {
             position: fixed; 
             top: 20px; 
@@ -60,28 +60,58 @@
         .caption { font-size: 0.6em; color: var(--dark-blue); margin-top: 5px; font-weight: bold; }
         .service-list { text-align: left; font-size: 0.75em; line-height: 1.6; }
         .category-tag { 
-    display: block; 
-    font-size: 0.6em; 
-    color: var(--light-green); 
-    font-weight: bold; 
-    text-transform: capitalize; /* هذا التعديل سيجعل الحرف الأول فقط كبيراً B */
-    margin-bottom: 5px; 
-}
+            display: block; 
+            font-size: 0.6em; 
+            color: var(--light-green); 
+            font-weight: bold; 
+            text-transform: capitalize; 
+            margin-bottom: 5px; 
+        }
+
+        /* 📊 شبكة مخصصة لعرض 3 شهادات عمودية متجاورة بدقة */
+        .cert-grid-three {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            align-items: start;
+            padding: 10px;
+        }
+
+        .certificate-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .certificate-img {
+            width: 100%;
+            height: 320px; /* ارتفاع متناسق ليناسب وجود 3 شهادات في نفس الشاشة */
+            object-fit: contain;
+            border-radius: 6px;
+            border: 3px solid white;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+            background-color: #fff;
+        }
+        
+        .cert-caption {
+            font-size: 0.45em;
+            color: var(--dark-blue);
+            margin-top: 8px;
+            font-weight: 600;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
 
-    <img src="Logo.png" class="fixed-logo">
+    <img src="logo.png" class="fixed-logo" alt="Plumeria Logo" onerror="this.src='https://placehold.co/200x200/1d2a55/8bc655?text=Logo+fehlt';">
 
     <div class="reveal">
         <div class="slides">
 
-            <!-- 1. صفحة الغلاف الجديدة - صورة كاملة بدون نصوص -->
-<section data-background-image="hero.jpg" data-background-size="cover" data-background-position="center">
-    <!-- ترك الشريحة فارغة من الداخل لأن الصورة أصبحت خلفية تغطي كامل الشاشة -->
-</section>
+            <section data-background-image="hero.jpg" data-background-size="cover" data-background-position="center">
+            </section>
 
-            <!-- 2. الخدمات -->
             <section>
                 <h2>Unsere Leistungen</h2>
                 <div class="service-list">
@@ -99,7 +129,6 @@
                 </div>
             </section>
 
-            <!-- 3. Bauendreinigung H&M - Teil 1 -->
             <section>
                 <span class="category-tag">Bauendreinigung</span>
                 <h2>H&M - Erfurt (Teil 1)</h2>
@@ -109,7 +138,6 @@
                 </div>
             </section>
 
-            <!-- 3. Bauendreinigung H&M - Teil 2 -->
             <section>
                 <span class="category-tag">Bauendreinigung</span>
                 <h2>H&M - Erfurt (Teil 2)</h2>
@@ -119,7 +147,6 @@
                 </div>
             </section>
 
-            <!-- 3. Bauendreinigung H&M - Teil 3 -->
             <section>
                 <span class="category-tag">Bauendreinigung</span>
                 <h2>H&M - Erfurt (Teil 3)</h2>
@@ -129,7 +156,6 @@
                 </div>
             </section>
 
-            <!-- 3. Bauendreinigung H&M - Teil 4 -->
             <section>
                 <span class="category-tag">Bauendreinigung</span>
                 <h2>H&M - Erfurt (Teil 4)</h2>
@@ -139,7 +165,6 @@
                 </div>
             </section>         
                 
-            <!-- 4. Bauendreinigung Uni Weimar - Teil 1 -->
             <section>
                 <span class="category-tag">Bauendreinigung</span>
                 <h2>Bauhaus-Uni Weimar (Teil 1)</h2>
@@ -149,7 +174,6 @@
                 </div>
             </section>
 
-            <!-- 4. Bauendreinigung Uni Weimar - Teil 2 -->
             <section>
                 <span class="category-tag">Bauendreinigung</span>
                 <h2>Bauhaus-Uni Weimar (Teil 2)</h2>
@@ -159,7 +183,6 @@
                 </div>
             </section>    
 
-            <!-- 4. Bauendreinigung Uni Weimar - Teil 3 -->
             <section>
                 <span class="category-tag">Bauendreinigung</span>
                 <h2>Bauhaus-Uni Weimar (Teil 3)</h2>
@@ -169,7 +192,6 @@
                 </div>
             </section>      
 
-            <!-- 4. Bauendreinigung Uni Weimar - Teil 4 -->
             <section>
                 <span class="category-tag">Bauendreinigung</span>
                 <h2>Bauhaus-Uni Weimar (Teil 4)</h2>
@@ -178,7 +200,6 @@
                 </div>
             </section>              
 
-            <!-- 5. Glasreinigung - Teil 1 -->
             <section>
                 <h2>Glasreinigung (Teil 1)</h2>
                 <div class="gallery-grid">
@@ -187,7 +208,6 @@
                 </div>
             </section>
 
-            <!-- 5. Glasreinigung - Teil 2 -->
             <section>
                 <h2>Glasreinigung (Teil 2)</h2>
                 <div class="gallery-grid">
@@ -196,7 +216,6 @@
                 </div>
             </section>
 
-            <!-- 5. Glasreinigung - Teil 3 -->
             <section>
                 <h2>Glasreinigung (Teil 3)</h2>
                 <div class="gallery-grid">
@@ -205,7 +224,6 @@
                 </div>
             </section>            
 
-            <!-- 6. Industriereinigung -->
             <section>
                 <h3>Industriereinigung</h3>
                 <div class="gallery-grid" style="grid-template-columns: repeat(3, 1fr);">
@@ -215,7 +233,6 @@
                 </div>
             </section>
 
-            <!-- 7. verschiedene Arbeiten - Teil 1 (تم تصحيح وسوم الإغلاق هنا) -->
             <section>
                 <h3>Verschiedene Arbeiten (Teil 1)</h3>
                 <div class="gallery-grid">
@@ -226,7 +243,6 @@
                 </div>
             </section>
 
-            <!-- 7. verschiedene Arbeiten - Teil 2 -->
             <section>
                 <h3>Verschiedene Arbeiten (Teil 2)</h3>
                 <div class="gallery-grid">
@@ -237,27 +253,71 @@
                 </div>
             </section>
 
-            <!-- 8. Unser Team -->
             <section>
                 <h3>Unser Team</h3>
                 <img src="team/team1.jpeg" style="height: 400px; border-radius: 15px; border: 5px solid white; box-shadow: 0 10px 20px rgba(0,0,0,0.1);">
                 <p style="font-size: 0.6em; margin-top: 10px;">Professionell, zuverlässig und immer für Sie da.</p>
             </section>
 
-            <!-- 9. Kontakt -->
-<section>
-    <h2>Kontakt</h2>
-    <div style="color: var(--dark-blue); font-size: 0.7em; text-align: left; padding: 40px; background: #ffffff; border-radius: 10px; border: 1px solid #ddd; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
-        <p><strong>Plumeria Service für Reinigungsdienstleistung </strong></p>
-        <p>Inhaber: Mohamed Abubaker</p>
-        <hr style="border: 0; border-top: 1px solid #ddd;">
-        <p> Mobil: 0179 4605942</p>
-        <p> Telefon: 03643 216 42 21</p>
-        <p> E-Mail: info@plumeria-service.de</p>
-        <p> Web: www.plumeria-service.de</p>
-        <p> Adresse: Otto-Schott-Straße 1, 99427 Weimar</p>
-    </div>
-</section>
+            <section>
+                <h3>Unsere Qualifikationen (Teil 1)</h3>
+                <div class="cert-grid-three">
+                    <div class="certificate-container">
+                        <img src="cert1.jpg" class="certificate-img" alt="Zertifikat 1" onerror="this.src='https://placehold.co/400x600/1d2a55/8bc655?text=Cert+1';">
+                        <p class="cert-caption">Zertifikat 1</p>
+                    </div>
+                    <div class="certificate-container">
+                        <img src="cert2.jpg" class="certificate-img" alt="Zertifikat 2" onerror="this.src='https://placehold.co/400x600/1d2a55/8bc655?text=Cert+2';">
+                        <p class="cert-caption">Zertifikat 2</p>
+                    </div>
+                    <div class="certificate-container">
+                        <img src="cert3.jpg" class="certificate-img" alt="Zertifikat 3" onerror="this.src='https://placehold.co/400x600/1d2a55/8bc655?text=Cert+3';">
+                        <p class="cert-caption">Zertifikat 3</p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h3>Unsere Qualifikationen (Teil 2)</h3>
+                <div class="cert-grid-three">
+                    <div class="certificate-container">
+                        <img src="cert4.jpg" class="certificate-img" alt="Zertifikat 4" onerror="this.src='https://placehold.co/400x600/1d2a55/8bc655?text=Cert+4';">
+                        <p class="cert-caption">Zertifikat 4</p>
+                    </div>
+                    <div class="certificate-container">
+                        <img src="cert5.jpg" class="certificate-img" alt="Zertifikat 5" onerror="this.src='https://placehold.co/400x600/1d2a55/8bc655?text=Cert+5';">
+                        <p class="cert-caption">Zertifikat 5</p>
+                    </div>
+                    <div class="certificate-container">
+                        <img src="cert6.jpg" class="certificate-img" alt="Zertifikat 6" onerror="this.src='https://placehold.co/400x600/1d2a55/8bc655?text=Cert+6';">
+                        <p class="cert-caption">Zertifikat 6</p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h3>Unsere Qualifikationen (Teil 3)</h3>
+                <div class="cert-grid-three" style="grid-template-columns: repeat(3, 1fr);">
+                    <div class="certificate-container">
+                        <img src="cert7.jpg" class="certificate-img" alt="Zertifikat 7" onerror="this.src='https://placehold.co/400x600/1d2a55/8bc655?text=Cert+7';">
+                        <p class="cert-caption">Zertifikat 7</p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Kontakt</h2>
+                <div style="color: var(--dark-blue); font-size: 0.7em; text-align: left; padding: 40px; background: #ffffff; border-radius: 10px; border: 1px solid #ddd; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+                    <p><strong>Plumeria Service für Reinigungsdienstleistung </strong></p>
+                    <p>Inhaber: Mohamed Abubaker</p>
+                    <hr style="border: 0; border-top: 1px solid #ddd;">
+                    <p> Mobil: 0179 4605942</p>
+                    <p> Telefon: 03643 216 42 21</p>
+                    <p> E-Mail: info@plumeria-service.de</p>
+                    <p> Web: www.plumeria-service.de</p>
+                    <p> Adresse: Otto-Schott-Straße 1, 99427 Weimar</p>
+                </div>
+            </section>
 
         </div>
     </div>
